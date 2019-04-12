@@ -91,16 +91,15 @@ void Register::printStats() //prints all the statistics for the programme
 
 
 
-void Register::RunSimulation() //runs enterely the programme
+void Register::RunSimulation(string fileName) //runs enterely the programme
 {
 
-  string fileName = "";
   cout << "Registrars Office simulation" << endl;
   string firstLine = "";
   fstream file(fileName);
   if(file.is_open())
   {
-    //std::cout << "inside the file" << '\n'; 
+    //std::cout << "inside the file" << '\n';
     int time = 0;
     getline(file,firstLine);
     openWindow(stoi(firstLine));
